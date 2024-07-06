@@ -4,12 +4,15 @@ const FAVORITES_API_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 export async function fetchWeather(city) {
     const response = await fetch(`${WEATHER_BASE_URL}?q=${city}&appid=${WEATHER_API_KEY}&units=metric`);
-    if (!response.ok) {
+    if (!response.data) {
         throw new Error('City not found');
     }
     const data = await response.json();
     return data;
 }
+
+console.log()
+
 
 export async function addFavorite(city) {
     const response = await fetch(FAVORITES_API_URL, {
@@ -17,7 +20,7 @@ export async function addFavorite(city) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ city }),
     });
-    if (!response.ok) {
+    if (!response.data) {
         throw new Error('Failed to add favorite');
     }
     const data = await response.json();
@@ -30,7 +33,7 @@ export async function updateFavorite(id, city) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ city }),
     });
-    if (!response.ok) {
+    if (!response.data) {
         throw new Error('Failed to update favorite');
     }
     const data = await response.json();
@@ -41,7 +44,7 @@ export async function deleteFavorite(id) {
     const response = await fetch(`${FAVORITES_API_URL}/${id}`, {
         method: 'DELETE',
     });
-    if (!response.ok) {
+    if (!response.data) {
         throw new Error('Failed to delete favorite');
     }
     return true;
