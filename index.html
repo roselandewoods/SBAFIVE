@@ -3,37 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Favorite Weather App</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
+<body>
     <body style="background: url('https://cdn.pixabay.com/photo/2016/07/21/10/27/maldives-1532172_1280.jpg') no-repeat center center fixed; background-size: cover;">
- <div id="app">
-        <h2>Good Morning Amber, Today is going to be a sunny day!</h2>
+<div id="app">
+        <h1>Hi Steve, Have a great day!</h1>
         <form id="weather-form">
             <input type="text" id="city-input" placeholder="Enter city name">
-            <button type="submit">Get Weather</button>
+            <button type="submit">Weather</button>
         </form>
 
 
+
         <div id="weather-result"></div>
-        <div id="favorites">
-            <h3>Your Favorite Cities</h3>
-            <ul id="favorites-list"></ul>
-        </div>
     </div>
-
-
-    <div id="audio-controls">
-        <button id="play-button">Play Music</button>
-        <button id="pause-button">Pause Music</button>
-        <button id="volume-up-button">Volume Up</button>
-        <button id="volume-down-button">Volume Down</button>
-    </div>
-    
-    <audio id="background-music" src="https://cdn.freesound.org/sounds/711/711671-bc25e9ac-7e2f-44ee-ace2-aa73e072af0e?filename=711671__audiocoffee__summer-surf-loop-ver.wav" loop></audio>
-    
-    <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
