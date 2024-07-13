@@ -20,11 +20,13 @@ body {
 #weather-form {
     display: flex;
     justify-content: space-between;
+    border-radius: 40px;
 }
 
 #city-input {
     flex: 1;
     padding: 5px;
+    border-radius: 40px;
 }
 
 button {
